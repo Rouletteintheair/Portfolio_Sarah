@@ -47,10 +47,26 @@
 
         <h4>Actions réalisées</h4>
         <ul>
-          <li>Première action réalisée</li>
-          <li>Deuxième action réalisée</li>
-          <li>Troisième action réalisée</li>
-        </ul>
+          <li>	• Étape 1 : Création des "Flow Records" (Enregistrements)</li>
+              <em>	○ Explication : J'ai défini les critères de capture (adresses IP source/destination, ports TCP/UDP) et les compteurs (nombre d'octets et de paquets) pour le trafic entrant (AuvikInputRecord) et sortant (AuvikOutputRecord).</em>
+              <br>
+          <li>	• Étape 2 : Configuration des "Flow Monitors" (Moniteurs)</li>
+              <em>	○ Explication : J'ai configuré la destination d'envoi des données.
+		○ Données clés : Envoi vers l'IP du collecteur Auvik (192.168.14.200) via le port UDP 2055.</em>
+          <br>
+          <li>	• Étape 3 : Vérification de la transmission des données vers Auvik</li>
+          <em>		○ Explication : J'ai lié les Records créés à l'étape 1 avec l'Exporter créé à l'étape 2.</em>
+          <br>
+          <li>	• Étape 4 : Application sur les interfaces réseau</li>
+              <em>	○ Explication : J'ai appliqué ces moniteurs sur l'interface virtuelle appropriée (ici le vlan 913) pour qu'il commence à analyser le trafic réel.</em>
+        <br>
+          <li>	• Étape 5 : Sauvegarde de la configuration</li>
+              <em>	○ Action : Exécution de la commande copy running-config startup-config pour s'assurer que la configuration survive à un redémarrage électrique du switch.</em>
+        
+
+
+
+          </ul>
 
         <h4>Outils utilisés</h4>
         <p>Microsoft 365, Teams, SharePoint...</p>
